@@ -5,6 +5,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+html {
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
 
 @media (min-width: 768px) {
   .container {
@@ -33,9 +38,16 @@ header {
     align-items: center;
 
     ul {
+      
       li {
         margin-left: 30px;
+        padding: 4px;
+        transition-duration: 0.6s;
       }
+    }
+    li:hover{
+      background-color: rgba(240, 255, 255, 0.189);
+      border-radius: 10%;
     }
     span {
       img {
@@ -66,10 +78,12 @@ header {
     }
   }
 }
+
 .tech {
   h1 {
     font-size: 40px;
     margin-bottom: 30px;
+    font-weight: bold;
   }
   p {
     font-size: 30px;
@@ -77,12 +91,71 @@ header {
   }
   img {
     width: 80px;
+    transition-duration: 0.3s;
+  }
+  img:hover {
+    transform: scale(1.2);
   }
   .icons {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 60px 100px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 100px;
+
+    align-content: center;
     justify-items: center;
-    align-items: center;
     margin-bottom: 160px;
+  }
+}
+
+.projects {
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 30px;
+    margin-bottom: 160px;
+  }
+  .project-cards {
+    display: grid;
+    gap: 70px 70px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .project-card {
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 15px;
+    height: 480px;
+    .img_container {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        transform: scale(1.5);
+        transition: transform 0.5s;
+      }
+    }
+    &:hover .img_container img {
+      transform: scale(2);
+    }
+    .projrct-card__content {
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      text-align: center;
+      p {
+        font-size: 17px;
+        height: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
   }
 }
