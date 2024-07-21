@@ -27,14 +27,14 @@
   margin: 0;
 }
 
-header {
+header .container {
   width: 100%;
   align-items: center;
 }
-header ul li {
+header .container ul li {
   margin-left: 30px;
 }
-header span img {
+header .container span img {
   margin-right: 12px;
   width: 28px;
   height: 28px;
@@ -44,17 +44,39 @@ header span img {
   height: calc(100vh - 64px);
   overflow: hidden;
 }
-.home img {
+.home .container {
+  height: 100%;
+}
+.home .container img {
   border: 7px solid white;
   border-radius: 50%;
 }
-.home p {
+.home .container p {
   font-family: "Archivo Black", sans-serif;
   font-size: 30px;
 }
-.home p span {
+.home .container p span {
   background-image: linear-gradient(120deg, white, rgb(118, 117, 117));
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.tech h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.tech p {
+  font-size: 30px;
+  margin-bottom: 160px;
+}
+.tech img {
+  width: 80px;
+}
+.tech .icons {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 6fr));
+  gap: 60px 100px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 160px;
 }/*# sourceMappingURL=style.css.map */
