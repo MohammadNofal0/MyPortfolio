@@ -1,3 +1,28 @@
+.container {
+  /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 * {
   margin: 0;
 }
@@ -13,4 +38,23 @@ header span img {
   margin-right: 12px;
   width: 28px;
   height: 28px;
+}
+
+.home {
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+.home img {
+  border: 7px solid white;
+  border-radius: 50%;
+}
+.home p {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 30px;
+}
+.home p span {
+  background-image: linear-gradient(120deg, white, rgb(118, 117, 117));
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }/*# sourceMappingURL=style.css.map */

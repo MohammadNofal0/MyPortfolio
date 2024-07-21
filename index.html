@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-neutral-900">
-    <header class="h-16 bg-slate-500 flex justify-around">
+  <body class="bg-zinc-900">
+    <div class="container">
+    <header class="h-16 bg-zinc-900 flex justify-between">
+      
       <img class="h-14 w-14" src="img/mn logo.png" alt="" />
-      <ul class="links flex">
+      <ul class="links flex text-white">
         <li>Home</li>
-        <li>About</li>
-        <li>tech stack</li>
-        <li>projects</li>
+        <li>Tech Stack</li>
+        <li>Projects</li>
         <li class="mr-11">Contact</li>
         <span class="logos flex">
           <img src="img/linkedin.png" alt="" />
@@ -21,8 +29,26 @@
           <img src="img/github.png" alt="" />
         </span>
       </ul>
+    
     </header>
-    <main></main>
+  </div>
+    <main class="bg-zinc-900">
+      <div class="container">
+      <section class="home flex justify-between items-center bg-zinc-900">
+        <p class="text-white">
+          Hi, <br />
+          my name is <br />
+          <span class="">Mohammad Nofal</span> <br />
+          i build things for web
+        </p>
+        <img class="h-56 w-56 m-0 p-0" src="img/profile picture.jpg" alt="" />
+      </section>
+    </div>
+      <section class="teach">
+
+      </section>
+    </main>
+
     <footer></footer>
   </body>
 </html>
