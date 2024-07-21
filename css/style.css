@@ -1,7 +1,7 @@
 .container {
   /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 65px;
+  padding-right: 65px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -46,10 +46,14 @@ header .container li:hover {
   background-color: rgba(240, 255, 255, 0.189);
   border-radius: 10%;
 }
+header .container span img:hover {
+  transform: scale(1.2);
+}
 header .container span img {
   margin-right: 12px;
   width: 28px;
   height: 28px;
+  transition-duration: 0.3s;
 }
 
 .home {
@@ -74,7 +78,7 @@ header .container span img {
           background-clip: text;
 }
 
-.tech h1 {
+.tech h2 {
   font-size: 40px;
   margin-bottom: 30px;
   font-weight: bold;
@@ -98,6 +102,9 @@ header .container span img {
   margin-bottom: 160px;
 }
 
+.projects {
+  margin-bottom: 70px;
+}
 .projects h2 {
   font-size: 40px;
   font-weight: bold;
@@ -148,4 +155,17 @@ header .container span img {
   height: 0px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+footer {
+  width: 100%;
+}
+footer .line {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  opacity: 0.2;
+}
+footer .owner {
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */

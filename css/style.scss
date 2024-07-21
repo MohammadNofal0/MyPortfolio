@@ -1,11 +1,11 @@
 .container {
   /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 65px;
+  padding-right: 65px;
   margin-left: auto;
   margin-right: auto;
 }
-html {
+html{
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
   scroll-behavior: smooth;
@@ -50,10 +50,14 @@ header {
       border-radius: 10%;
     }
     span {
+      img:hover {
+        transform: scale(1.2);
+      }
       img {
         margin-right: 12px;
         width: 28px;
         height: 28px;
+        transition-duration: 0.3s;
       }
     }
   }
@@ -80,7 +84,7 @@ header {
 }
 
 .tech {
-  h1 {
+  h2 {
     font-size: 40px;
     margin-bottom: 30px;
     font-weight: bold;
@@ -107,6 +111,7 @@ header {
 }
 
 .projects {
+  margin-bottom: 70px;
   h2 {
     font-size: 40px;
     font-weight: bold;
@@ -157,5 +162,18 @@ header {
         margin-right: 5px;
       }
     }
+  }
+}
+
+footer{
+  width: 100%;
+  .line{
+    width: 100%;
+    margin-bottom:30px ;
+    margin-top:30px ;
+    opacity: 0.2;
+  }
+  .owner{
+    margin-bottom:30px ;
   }
 }
