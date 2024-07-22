@@ -19,20 +19,27 @@
     />
   </head>
   <body class="bg-zinc-900">
+    
     <header class="">
       <div class="container h-16 flex justify-between">
         <img class="h-14 w-14" src="img/mn logo.png" alt="" />
         <ul class="links flex text-white">
-          <a href="#home"><li>Home </li></a>
+          <a href="#home"><li>Home</li></a>
+          <a href="#about"><li>About</li></a>
           <a href="#tech"><li>Tech Stack</li></a>
           <a href="#projects"><li>Projects</li></a>
           <a href="#contact"><li class="mr-11">Contact</li></a>
-          
+
           <span class="logos flex">
-            <a href="https://www.linkedin.com/in/mohammad-nofal-01601925a/"><img src="img/linkedin.png" alt="" /></a>
-            <a href="https://codepen.io/MohammadNofal0"><img src="img/codepen.png" alt="" /></a>
-            <a href="https://github.com/MohammadNofal0"><img src="img/github.png" alt="" /></a>
-            
+            <a href="https://www.linkedin.com/in/mohammad-nofal-01601925a/"
+              ><img src="img/linkedin.png" alt=""
+            /></a>
+            <a href="https://codepen.io/MohammadNofal0"
+              ><img src="img/codepen.png" alt=""
+            /></a>
+            <a href="https://github.com/MohammadNofal0"
+              ><img src="img/github.png" alt=""
+            /></a>
           </span>
         </ul>
       </div>
@@ -40,7 +47,7 @@
 
     <main>
       <section id="home" class="home">
-        <div class="container flex justify-between items-center bg-zinc-900">
+        <div class="container flex justify-between items-center ">
           <p class="text-white">
             Hi, <br />
             my name is <br />
@@ -48,6 +55,61 @@
             i build things for web
           </p>
           <img class="h-56 w-56 m-0 p-0" src="img/profile picture.jpg" alt="" />
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="text-white text-center">About Me</h2>
+          <p class="text-white text-center mb-32">Who am i?</p>
+
+          <div class="cards text-white flex justify-between">
+
+            <div class="edu bg-zinc-700 rounded-2xl">
+              <h3 class="font-bold p-2">Education</h3>
+              <div class="for-flex flex justify-center">
+                <div class="logos flex flex-col items-center pt-3">
+                  <span class="material-icons-outlined m-3"> school </span>
+                  <div class="line"></div>
+                </div>
+                <div class="text flex flex-col  p-5">
+                  <h4 class="font-bold mb-2">Bachelor's Degree</h4>
+                  <p class>in Computer Engineering from University of Jordan</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp bg-zinc-700 rounded-2xl">
+              <h3 class="font-bold p-2">Experience</h3>
+              <div class="for-flex flex justify-center">
+                <div class="logos flex flex-col items-center pt-3">
+                  <span class="material-icons-outlined m-3"> work_outline </span>
+                  <div class="line"></div>
+                </div>
+                <div class="text flex flex-col p-5">
+                  <h4 class="font-bold mb-2">Front-End Developer Intern</h4>
+                  <p>At RealSoft learned HTML, CSS, JS, Angular and many other useful and important technologies</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="vol bg-zinc-700 rounded-2xl">
+              <h3 class="font-bold p-2">Volunteering</h3>
+              <div class="for-flex flex justify-center">
+                <div class="logos flex flex-col items-center pt-3">
+                  <span class="material-icons-outlined m-3"> volunteer_activism </span>
+                  <div class="line"></div>
+                </div>
+                <div class="text flex flex-col p-5">
+                  <h4 class="font-bold mb-2">Member of Ahl Al Hemmeh</h4>
+                  <p >
+                    Ahl Al Hemmeh is one of the inveterate student organizations
+                    emanated from the University of Jordan students
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -240,10 +302,9 @@
       <div class="container">
         <div class="personal flex justify-between items-center">
           <img class="h-14 w-14" src="img/mn logo.png" alt="" />
-          <div class="information flex text-white">
-            <p class="font-bold">Contact me at:</p>
-            <p class="ml-4">+962790211052</p>
-            <p class="ml-8">mohammad2562005@gmail.com</p>
+          <div class="information flex flex-col text-white d">
+            <p class="font-bold mb-4">Contact me at:</p>
+            <p class="mb-4">mohammad2562005@gmail.com</p>
           </div>
         </div>
         <div class="line h-1 bg-slate-400"></div>
@@ -253,5 +314,6 @@
         </div>
       </div>
     </footer>
+
   </body>
 </html>

@@ -1,7 +1,7 @@
 .container {
   /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
-  padding-left: 65px;
-  padding-right: 65px;
+  padding-left: 155px;
+  padding-right: 155px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -12,6 +12,20 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  animation: transitionIn 1s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -76,6 +90,36 @@ header .container span img {
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.about {
+  margin-bottom: 130px;
+}
+.about h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.about p {
+  font-size: 30px;
+}
+.about .cards .for-flex {
+  display: flex;
+}
+.about .cards div {
+  height: 250px;
+  width: 300px;
+}
+.about .cards .text p {
+  font-size: 16px;
+}
+.about .cards .logos {
+  width: 70px;
+}
+.about .cards .logos .line {
+  background-color: white;
+  height: 80px;
+  width: 1px;
 }
 
 .tech h2 {
