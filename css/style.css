@@ -1,7 +1,7 @@
 .container {
   /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
-  padding-left: 155px;
-  padding-right: 155px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -40,7 +40,7 @@ body {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1170px !important;
   }
 }
 * {
@@ -48,8 +48,12 @@ body {
 }
 
 header .container {
-  width: 100%;
   align-items: center;
+}
+@media (max-width: 768px) {
+  header .container li {
+    display: none;
+  }
 }
 header .container ul li {
   margin-left: 30px;
@@ -77,15 +81,20 @@ header .container span img {
 .home .container {
   height: 100%;
 }
-.home .container img {
+@media (max-width: 768px) {
+  .home .container {
+    flex-direction: column;
+  }
+}
+.home img {
   border: 7px solid white;
   border-radius: 50%;
 }
-.home .container p {
+.home p {
   font-family: "Archivo Black", sans-serif;
   font-size: 30px;
 }
-.home .container p span {
+.home p span {
   background-image: linear-gradient(120deg, white, rgb(118, 117, 117));
   color: transparent;
   -webkit-background-clip: text;
@@ -102,6 +111,12 @@ header .container span img {
 }
 .about p {
   font-size: 30px;
+}
+@media (max-width: 768px) {
+  .about .cards {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 .about .cards .for-flex {
   display: flex;
@@ -145,6 +160,11 @@ header .container span img {
   justify-items: center;
   margin-bottom: 160px;
 }
+@media (max-width: 768px) {
+  .tech .icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .projects {
   margin-bottom: 70px;
@@ -162,39 +182,42 @@ header .container span img {
   display: grid;
   gap: 70px 70px;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 }
 .projects .project-card {
   overflow: hidden;
   overflow-wrap: anywhere;
   flex-direction: column;
-  width: 300px;
+  max-width: 300px;
   border-radius: 15px;
   height: 480px;
+  align-items: center;
 }
-.projects .project-card .img_container {
+.projects .img_container {
   width: 100%;
   height: 220px;
   overflow: hidden;
 }
-.projects .project-card .img_container img {
+.projects .img_container img {
   width: 100%;
   transform: scale(1.5);
   transition: transform 0.5s;
 }
-.projects .project-card:hover .img_container img {
+.projects:hover .img_container img {
   transform: scale(2);
 }
-.projects .project-card .projrct-card__content {
+.projects .projrct-card__content {
   text-align: center;
 }
-.projects .project-card .projrct-card__content h3 {
+.projects .projrct-card__content h3 {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
 }
-.projects .project-card .projrct-card__content p {
+.projects .projrct-card__content p {
   font-size: 17px;
   height: 0px;
   margin-left: 5px;

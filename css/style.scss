@@ -1,7 +1,7 @@
 .container {
   /* We use padding-right and left for when size is small for example for a phone because for a small screen no margin will be do */
-  padding-left: 155px;
-  padding-right: 155px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -14,7 +14,6 @@ body {
   animation: transitionIn 1s;
 }
 
-
 @keyframes transitionIn {
   from {
     opacity: 0;
@@ -25,8 +24,6 @@ body {
     transform: translateY(0px);
   }
 }
-
-
 
 @media (min-width: 768px) {
   .container {
@@ -42,7 +39,7 @@ body {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1170px !important;
   }
 }
 
@@ -51,10 +48,13 @@ body {
 }
 header {
   .container {
-    width: 100%;
     align-items: center;
-    
 
+    li {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
     ul {
       li {
         margin-left: 30px;
@@ -79,23 +79,28 @@ header {
     }
   }
 }
+
 .home {
   height: calc(100vh - 64px);
   overflow: hidden;
   .container {
     height: 100%;
-    img {
-      border: 7px solid white;
-      border-radius: 50%;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
-    p {
-      font-family: "Archivo Black", sans-serif;
-      font-size: 30px;
-      span {
-        background-image: linear-gradient(120deg, white, rgb(118, 117, 117));
-        color: transparent;
-        background-clip: text;
-      }
+  }
+
+  img {
+    border: 7px solid white;
+    border-radius: 50%;
+  }
+  p {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 30px;
+    span {
+      background-image: linear-gradient(120deg, white, rgb(118, 117, 117));
+      color: transparent;
+      background-clip: text;
     }
   }
 }
@@ -111,20 +116,20 @@ header {
     font-size: 30px;
   }
   .cards {
-    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+    }
     .for-flex {
       display: flex;
-      
-      
     }
 
     div {
       height: 250px;
       width: 300px;
     }
-   
+
     .text {
-      
       p {
         font-size: 16px;
       }
@@ -159,6 +164,10 @@ header {
   }
   .icons {
     grid-template-columns: repeat(6, 1fr);
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     gap: 100px;
 
     align-content: center;
@@ -182,42 +191,47 @@ header {
     display: grid;
     gap: 70px 70px;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+
   }
   .project-card {
     overflow: hidden;
     overflow-wrap: anywhere;
     flex-direction: column;
-    width: 300px;
+    max-width: 300px;
     border-radius: 15px;
     height: 480px;
-    .img_container {
+    align-items: center;
+    
+  }
+  .img_container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    img {
       width: 100%;
-      height: 220px;
-      overflow: hidden;
-      img {
-        width: 100%;
-        transform: scale(1.5);
-        transition: transform 0.5s;
-      }
+      transform: scale(1.5);
+      transition: transform 0.5s;
     }
-    &:hover .img_container img {
-      transform: scale(2);
+  }
+  &:hover .img_container img {
+    transform: scale(2);
+  }
+  .projrct-card__content {
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
     }
-    .projrct-card__content {
-      h3 {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      text-align: center;
-      p {
-        font-size: 17px;
-        height: 0px;
-        margin-left: 5px;
-        margin-right: 5px;
-      }
+    text-align: center;
+    p {
+      font-size: 17px;
+      height: 0px;
+      margin-left: 5px;
+      margin-right: 5px;
     }
   }
 }
