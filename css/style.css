@@ -124,7 +124,6 @@ header .container span img {
   display: flex;
 }
 .about .cards div {
-  height: 250px;
   width: 300px;
 }
 .about .cards .text p {
@@ -135,7 +134,7 @@ header .container span img {
 }
 .about .cards .logos .line {
   background-color: white;
-  height: 80px;
+  height: 60px;
   width: 1px;
 }
 
@@ -197,29 +196,29 @@ header .container span img {
   height: 480px;
   align-items: center;
 }
-.projects .img_container {
+.projects .project-card .img_container {
   width: 100%;
   height: 220px;
   overflow: hidden;
 }
-.projects .img_container img {
+.projects .project-card .img_container img {
   width: 100%;
   transform: scale(1.5);
   transition: transform 0.5s;
 }
-.projects:hover .img_container img {
+.projects .project-card:hover .img_container img {
   transform: scale(2);
 }
-.projects .projrct-card__content {
+.projects .project-card__content {
   text-align: center;
 }
-.projects .projrct-card__content h3 {
+.projects .project-card__content h3 {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
 }
-.projects .projrct-card__content p {
+.projects .project-card__content p {
   font-size: 17px;
   height: 0px;
   margin-left: 5px;
