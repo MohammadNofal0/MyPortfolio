@@ -120,6 +120,7 @@ header {
   .cards {
     @media (max-width: 768px) {
       flex-direction: column;
+      align-items: center;
       gap: 30px;
     }
     .for-flex {
@@ -186,7 +187,7 @@ header {
   }
   p {
     font-size: 30px;
-    margin-bottom: 160px;
+    
   }
   .project-cards {
     display: grid;
